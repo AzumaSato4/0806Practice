@@ -1,3 +1,27 @@
+h2 {
+    font-size: 2.2rem;
+    /* text-decoration: underline; 文字への下線*/
+    border-bottom: 2px solid #f60;
+}
+
+a {
+    color: #07c;
+    text-decoration: none;
+    /* ホバーした時、どのくらいで状況が変わるのかの指定秒数 */
+    transition: 4s;
+}
+
+
+img {
+    border-radius: 8px;
+}
+
+/* マウスを上乗せしている最中のaのデザイン */
+a:hover {
+    color: #5af;
+
+}
+
 span {
     color: orange;
 }
@@ -6,7 +30,8 @@ img {
     /* 親の幅以上に大きくならない */
     width: 100%;
     height: 100%;
-    object-fit: cover; /*大きさによって比率は崩さない 初期値中央を残す*/
+    object-fit: cover;
+    /*大きさによって比率は崩さない 初期値中央を残す*/
 }
 
 .main-visual {
@@ -24,6 +49,12 @@ img {
     padding-top: 60px;
     /* 余白計算を含み計算にする */
     box-sizing: border-box;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper {
@@ -32,13 +63,13 @@ img {
     margin: 0 auto;
 }
 
-.main-visual p {
-    color: white;
-    text-align: center;
+p, h2, h3 {
+    /* 行間 */
+    line-height: 1.8;
 }
 
 .main-catch {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: bold;
 }
 
@@ -56,17 +87,15 @@ img {
     border-radius: 8px;
 
     /* 性格をpやdivと同じに捻じ曲げる */
-    display: block;
+    display: inline-block;
     /*もともとはinline*/
     /* 中央揃え */
     text-align: center;
-    /* 幅を絞る */
-    width: 30%;
     /* 外側の余白 */
     /* margin-top: 20px; */
     /* margin-right: auto; */
     /* margin-left: auto; */
-    margin: 20px auto 0;
+    margin-top: 20px;
 }
 
 header {
@@ -77,7 +106,8 @@ header {
     align-items: center;
     /*要素の進行方向に対して垂直方向を中央揃え*/
     padding: 10px 40px;
-
+    /* 影 */
+    box-shadow: 0 2px 5px #333;
 }
 
 ul {
@@ -92,6 +122,7 @@ ul {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 30px;
+    padding-bottom: 80px;
 }
 
 .gallery img:first-child {
@@ -110,90 +141,90 @@ ul {
 }
 
 .container {
-     padding: 5% 3%;
-     margin: 40px 0;
-     background-color: white;
-     border-radius: 8px;
-     border: 1px solid #eee;
-     width: 100%;
- }
+    padding: 5% 3%;
+    margin: 40px 0;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    width: 100%;
+}
 
- /* --- 特徴セクション (display:grid) --- */
- .features {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 30px;
-     text-align: center;
- }
+/* --- 特徴セクション (display:grid) --- */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
 
- .feature-item img {
-     width: 100%;
-     aspect-ratio: 10/6;
-     height:auto;
-     object-fit: cover;
- }
+.feature-item img {
+    width: 100%;
+    aspect-ratio: 10/6;
+    height: auto;
+    object-fit: cover;
+}
 
- /* --- 料金表 (table) --- */
- .price-table {
-     width: 100%;
-     border-collapse: collapse;
-     margin-top: 20px;
- }
+/* --- 料金表 (table) --- */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
- .price-table th,
- .price-table td {
-     border: 1px solid #ccc;
-     padding: 15px;
-     text-align: left;
- }
+.price-table th,
+.price-table td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: left;
+}
 
- .price-table th {
-     background-color: #f2f2f2;
- }
+.price-table th {
+    background-color: #f2f2f2;
+}
 
- /* --- 受講の流れ (ol, li) --- */
- .flow-list {
-     list-style: decimal;
-     padding-left: 20px;
- }
+/* --- 受講の流れ (ol, li) --- */
+.flow-list {
+    list-style: decimal;
+    padding-left: 20px;
+}
 
- .flow-list li {
-     margin-bottom: 15px;
- }
+.flow-list li {
+    margin-bottom: 15px;
+}
 
- /* --- フォーム (form) --- */
- .contact-form {
-     display: grid;
-     grid-template-columns: 1fr;
-     gap: 20px;
- }
+/* --- フォーム (form) --- */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
 
- .contact-form label {
-     font-weight: bold;
- }
+.contact-form label {
+    font-weight: bold;
+}
 
- .contact-form input[type="text"],
- .contact-form input[type="email"],
- .contact-form textarea {
-     width: 100%;
-     padding: 10px;
-     border: 1px solid #ccc;
-     border-radius: 4px;
- }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
- .contact-form input[type="submit"] {
-     width: 200px;
-     background-color: #ff6600;
-     color: white;
-     border: none;
-     padding: 15px;
-     cursor: pointer;
-     font-size: 1rem;
-     border-radius: 5px;
-     margin: 0 auto;
- }
+.contact-form input[type="submit"] {
+    width: 200px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 0 auto;
+}
 
- main {
+main {
     /* 色の種類は3種類 */
     /* カラーコード #から始まる6桁 赤2桁 緑2桁 青2桁 <00～ff>*/
     /* RGB値 rgb()に指定する10進数が3つ 赤、緑、青の3つの指定 0～255*/
@@ -202,4 +233,86 @@ ul {
     /* 光の三原色 赤成分・緑成分・青成分 */
 
     background-color: #f9f9f9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+
+footer ul {
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* --- レスポンシブ対応 (スマートフォン表示) --- */
+ @media (max-width: 768px) {
+     header {
+         flex-direction: column;
+         padding: 10px 20px;
+     }
+
+     header nav ul {
+         flex-direction: column;
+         margin-top: 10px;
+         width: 100%;
+         text-align: center;
+     }
+
+     header nav li {
+         margin: 5px 0;
+     }
+
+     .main-catch{
+        font-size: 28px;
+        line-height: 1.2;
+     }
+
+     h1 {
+         font-size: 2rem;
+     }
+
+     h2 {
+         font-size: 1.8rem;
+     }
+
+     .features {
+         grid-template-columns: 1fr;
+         /* 1列にする */
+     }
+
+     main {
+         width: 100%;
+     }
+
+     section {
+         padding: 40px 15px;
+     }
+
+     .gallery {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(3, 300px);
+     }
+
+     .gallery img:first-child {
+         grid-column: 1/2;
+         grid-row: 1/2;
+     }
+
+     .gallery img:nth-child(2) {
+         grid-column: 1/2;
+         grid-row: 2/3;
+     }
+
+     .gallery img:last-child {
+         grid-column: 1/2;
+         grid-row: 3/4;
+     }
  }
